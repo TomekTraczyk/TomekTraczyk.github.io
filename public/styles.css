@@ -72,3 +72,53 @@ footer {
 .image {
     height: 150px;
 }
+
+.ttt-container {
+    display: flex;
+    justify-content: center;
+}
+
+.ttt-board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border: 5px solid #8a8500;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: #f2f2f2;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+}
+
+.ttt-square {
+    flex-grow: 1;
+    border: 2px solid #8a8500;
+    font-size: 60px;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+    color: #8a8500;
+    transition: background-color 0.3s ease;
+}
+
+.ttt-square.donkey {
+    background-image: url("https://static.wikia.nocookie.net/parody/images/4/41/Donkey_in_Shrek_%28film%29.jpg/revision/latest?cb=20170410201602");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ttt-square.shrek {
+    background-image: url("https://is4-ssl.mzstatic.com/image/thumb/k2fiCG4xCKPhRLuygpzJlw/1200x675mf.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ttt-square:hover {
+    background-color: #ccc;
+}
