@@ -108,13 +108,13 @@ footer {
 }
 
 .ttt-square.donkey {
-    background-image: url("https://static.wikia.nocookie.net/parody/images/4/41/Donkey_in_Shrek_%28film%29.jpg/revision/latest?cb=20170410201602");
+    background-image: url("images/donkey.webp");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .ttt-square.shrek {
-    background-image: url("https://is4-ssl.mzstatic.com/image/thumb/k2fiCG4xCKPhRLuygpzJlw/1200x675mf.jpg");
+    background-image: url("images/shrek.webp");
     background-size: cover;
     background-repeat: no-repeat;
 }
