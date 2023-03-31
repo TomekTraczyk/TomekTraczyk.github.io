@@ -153,7 +153,10 @@
             let gameSquare = checkForBlockingMoves(shrekTurn);
 
             if (gameSquare) {
-                console.log(gameSquare)
+                gameSquare.classList.add(!shrekTurn ? 'shrek' : 'donkey')
+                gameSquare.dataset['pressedBy'] = !shrekTurn ? 'shrek' : 'donkey';
+            } else {
+                gameSquare = document.querySelector("[data-pressed-by='0']");
                 gameSquare.classList.add(!shrekTurn ? 'shrek' : 'donkey')
                 gameSquare.dataset['pressedBy'] = !shrekTurn ? 'shrek' : 'donkey';
             }
