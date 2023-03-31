@@ -80,11 +80,13 @@
         let iconSelect = document.querySelector('#game-icon-select');
         let gameInfo = document.querySelector('#game-info');
         let gameOn = false;
+        let shrekTurn;
+        let normalMode;
 
 
         document.querySelector('#start-game').addEventListener('click', () => {
-            let shrekTurn = iconSelect.selectedIndex === 0;
-            let normalMode = typeSelect.selectedIndex === 0;
+            shrekTurn = iconSelect.selectedIndex === 0;
+            normalMode = typeSelect.selectedIndex === 0;
             gameInfo.innerHTML = 'Ruch gracza ' + (shrekTurn ? 'shrek' : 'osioł');
             gameOn = true;
             clearBoard();
@@ -184,7 +186,7 @@
                     })
 
                     if (movesArray.length === 1) {
-                        let gameSquare = document.querySelector("[data-id='" + movesArray[0] +"']");
+                        let gameSquare = document.querySelector("div[data-id='" + movesArray[0] +"']");
                         if (gameSquare.dataset['pressedBy'] === '0') {
                             blockSquare = gameSquare;
                         }
