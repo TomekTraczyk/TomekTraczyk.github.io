@@ -94,6 +94,10 @@
                         gameSquare.classList.add(shrekTurn ? 'shrek' : 'donkey')
                         gameSquare.dataset['pressedBy'] = shrekTurn ? 'shrek' : 'donkey';
                         let winner = checkForWin();
+                        if (document.querySelectorAll("[data-pressed-by='0']").length === 0) {
+                            gameOn = false;
+                            gameInfo.innerHTML = 'Remis!';
+                        }
                         if (normalMode && gameOn) {
                             shrekTurn = !shrekTurn;
                             gameInfo.innerHTML = 'Ruch gracza ' + (shrekTurn ? 'shrek' : 'osioł');
@@ -156,9 +160,10 @@
                 gameSquare.classList.add(!shrekTurn ? 'shrek' : 'donkey')
                 gameSquare.dataset['pressedBy'] = !shrekTurn ? 'shrek' : 'donkey';
             } else {
-                gameSquare = document.querySelector("[data-pressed-by='0']");
-                gameSquare.classList.add(!shrekTurn ? 'shrek' : 'donkey')
-                gameSquare.dataset['pressedBy'] = !shrekTurn ? 'shrek' : 'donkey';
+                let freeSquares = document.querySelectorAll("[data-pressed-by='0']");
+                let index = Math.floor(Math.random() * freeSquares.length);
+                freeSquares[index].classList.add(!shrekTurn ? 'shrek' : 'donkey')
+                freeSquares[index].dataset['pressedBy'] = !shrekTurn ? 'shrek' : 'donkey';
             }
         }
 
