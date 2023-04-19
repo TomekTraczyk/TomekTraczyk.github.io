@@ -1,6 +1,6 @@
 function MainImage() {
     return(
-        <div className="main-img"></div>
+        <img src={'/main-image.webp'}  className="main-img"></img>
     )
 }
 

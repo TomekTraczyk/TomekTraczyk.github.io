@@ -7,13 +7,13 @@ import * as React from "react";
 function MainSection() {
     return(
         <div className="main-section">
-            <Card sx={{ minWidth: 275,  maxHeight: "calc(40vh - 29px)" }} style={{ display: 'flex', alignContent: 'center', flexFlow: 'wrap'}}>
-                <CardContent>
+            <Card sx={{ maxWidth: { xs: "75%", sm: "40%" },  height: "auto" }} style={{ display: 'flex', alignContent: 'center', flexFlow: 'wrap'}}>
+                <CardContent sx={{ width: '100%'}}>
                     <div>
-                        <Typography sx={{ fontSize: 24, fontWeight: 600, fontFamily: 'Garamond' }} color="text.primary" gutterBottom>
+                        <Typography sx={{ fontSize: { xs: 20, sm: 24 }, fontWeight: 600, fontFamily: 'Garamond' }} color="text.primary" gutterBottom>
                             Przepisy z całego świata
                         </Typography>
-                        <Typography sx={{ fontSize: 16, fontFamily: 'Garamond' }} color="text.secondary" gutterBottom>
+                        <Typography sx={{ fontSize: { xs: 12, sm: 16}, fontFamily: 'Garamond' }} color="text.secondary" gutterBottom>
                             Autorstwa Szefa Tomasza Traczyka
                         </Typography>
                     </div>

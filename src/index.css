@@ -22,11 +22,10 @@ code {
 }
 
 .main-img {
-  background-image: url("../public/main-image.webp");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: calc((40vh - 20px) * 1.8);
-  height: calc(40vh - 20px);
+  /*background-image: url("../public/main-image.webp");*/
+  max-width: 45%;
+  max-height: 85%;
+  height: auto;
 }
 
 .main-section {
@@ -36,4 +35,20 @@ code {
   align-content: center;
   height: 40vh;
   flex-flow: wrap;
+}
+
+.recipe-image {
+  max-width: 90%;
+  height: auto;
+}
+
+@media (max-width: 599px) {
+  .main-section {
+    flex-flow: column;
+    flex-wrap: wrap;
+  }
+
+  .main-img {
+    max-width: 75%;
+  }
 }
