@@ -1,7 +1,6 @@
 import * as React from 'react';
 
 import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Box from "@mui/material/Box";
 
@@ -23,7 +22,7 @@ function RecipeSection(props) {
                         <Typography component="div" sx={{ textAlign: 'left', fontFamily: 'Garamond', display: { xs: 'none', lg: 'block'}, lineBreak: 'anywhere' }}>
                             Składniki:<br/>
                             {props.ingridients.map((ingridient) =>
-                                <p style={{ margin: '5px 0 5px 15px', width: '100%' }}>-{ingridient}</p>
+                                <p key={ingridient} style={{ margin: '5px 0 5px 15px', width: '100%' }}>-{ingridient}</p>
                             )}
                         </Typography>
                         <Typography component="div" sx={{ marginBottom: '15px', textAlign: {xs: 'center', md: 'left'}, fontFamily: 'Garamond', display: { xs: 'block', lg: 'none'} }}>

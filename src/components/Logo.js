@@ -1,6 +1,6 @@
-function Logo() {
+function Logo(props) {
     return(
-        <div className="logo-img"></div>
+        <div className="logo-img" style={{...props.style}}></div>
     )
 }
 

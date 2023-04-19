@@ -1,36 +1,18 @@
 import './App.css';
-
-import RecipeSection from "./components/RecipeSection";
-import MenuBar from "./components/MenuBar";
-import MainSection from "./components/MainSection";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import ErrorPage from "./pages/404Page";
+import Gallery from "./pages/Gallery";
 
 function App() {
-    const recipes = [
-        [
-            1,
-            'Kanapka z pasztetem',
-            '/kanapka.jpg',
-            'Szybka i wspaniała',
-            ['chleb', 'pasztet', 'ogórek kiszony', 'masło'],
-            'Ukorić kromkę chleba, posmarować niewielką ilością masła, potem większą ilością pasztetu. Kanapki przyozdobić plasterkami ogórków.'
-        ],
-    ];
-
   return (
-    <div className="App" style={{height: '200vh'}}>
-        <MenuBar></MenuBar>
-        <MainSection></MainSection>
-        {recipes.map((recipe) =>
-            <RecipeSection
-                key={recipe[0]}
-                name={recipe[1]}
-                imageSrc={recipe[2]}
-                description={recipe[3]}
-                ingridients={recipe[4]}
-                instruction={recipe[5]}
-            />
-        )}
-    </div>
+      <BrowserRouter>
+          <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/galeria" element={<Gallery />} />
+              <Route path="*" element={<ErrorPage />} />
+          </Routes>
+      </BrowserRouter>
   );
 }
 
